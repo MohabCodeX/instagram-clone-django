@@ -1,5 +1,9 @@
 # Instagram Clone Project Documentation
 
+## WireFrame
+![wireframe](./SocialMediaPlatform.jpg)
+
+
 ## Project Overview
 
 A Django-based web application that replicates core Instagram functionality. The project is structured with multiple apps to handle different features and uses Django's built-in authentication system.
