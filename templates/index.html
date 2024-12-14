@@ -26,84 +26,17 @@
                             </div>
                             <span class="story__user">@{{request.user.username}}</span>
                         </button>
-                        <button class="story">
-                            <div class="story__avatar">
-                                <div class="story__border">
-                                    <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-                                        <circle r="31" cy="32" cx="32"/>
-                                    </svg>
-                                </div>
-                                <div class="story__picture">
-                                    <img src="{% static 'assets2/images/6.jpg' %}">
-                                </div>
-                            </div>
-                            <span class="story__user">@destiny</span>
-                        </button>
-                    <button class="story">
-                            <div class="story__avatar">
-                                <div class="story__border">
-                                    <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-                                        <circle r="31" cy="32" cx="32"/>
-                                    </svg>
-                                </div>
-                                <div class="story__picture">
-                                    <img src="{% static 'assets2/images/1.jpg' %}">
-                                </div>
-                            </div>
-                            <span class="story__user">@james</span>
-                        </button>
-                        <button class="story">
-                            <div class="story__avatar">
-                                <div class="story__border">
-                                    <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-                                        <circle r="31" cy="32" cx="32"/>
-                                    </svg>
-                                </div>
-                                <div class="story__picture">
-                                    <img src="{% static 'assets2/images/2.jpg' %}" style="width: 100px; height: 100px; object-fit: cover;">
-                                </div>
-                            </div>
-                            <span class="story__user">@samuel</span>
-                        </button>
-                        <button class="story">
-                            <div class="story__avatar">
-                                <div class="story__border">
-                                    <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-                                        <circle r="31" cy="32" cx="32"/>
-                                    </svg>
-                                </div>
-                                <div class="story__picture">
-                                    <img src="{% static 'assets2/images/5.jpg' %}" style="width: 100px; height: 100px; object-fit: cover;">
-                                </div>
-                            </div>
-                            <span class="story__user">@princewill</span>
-                        </button>
-                         <button class="story">
-                            <div class="story__avatar">
-                                <div class="story__border">
-                                    <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-                                        <circle r="31" cy="32" cx="32"/>
-                                    </svg>
-                                </div>
-                                <div class="story__picture">
-                                    <img src="{% static 'assets2/images/7.png' %}">
-                                </div>
-                            </div>
-                            <span class="story__user">@robert</span>
-                        </button>
-                        <button class="story">
-                            <div class="story__avatar">
-                                <div class="story__border">
-                                    <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-                                        <circle r="31" cy="32" cx="32"/>
-                                    </svg>
-                                </div>
-                                <div class="story__picture">
-                                    <img src="{% static 'assets2/images/4.jpg' %}">
-                                </div>
-                            </div>
-                            <span class="story__user">@destiny</span>
-                        </button>
+
+
+
+
+
+
+
+
+
+
+
                     </div>
                     <button class="stories__right-button">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -167,11 +100,15 @@
 
                                 <div class="post__indicators"></div>
 
-                                <a href="{% url 'favourite' post.id %}" class="post__button post__button--align-right">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M19.875 2H4.125C3.50625 2 3 2.44939 3 3.00481V22.4648C3 23.0202 3.36563 23.1616 3.82125 22.7728L11.5444 16.1986C11.7244 16.0471 12.0225 16.0471 12.2025 16.1936L20.1731 22.7879C20.6287 23.1666 21 23.0202 21 22.4648V3.00481C21 2.44939 20.4994 2 19.875 2ZM19.3125 20.0209L13.3444 15.0827C12.9281 14.7394 12.405 14.5677 11.8763 14.5677C11.3363 14.5677 10.8019 14.7444 10.3856 15.0979L4.6875 19.9502V3.51479H19.3125V20.0209Z" fill="var(--text-dark)" stroke="var(--text-dark)" stroke-width="0.7"/>
-                                    </svg>
-                                </a>
+                                <form action="{% url 'favourite' post.id %}" method="POST" style="display: inline;" class="post__button--align-right">
+                                    {% csrf_token %}
+                                    <button type="submit" class="post__button post__button--align-right" style="background: none; border: none; cursor: pointer;">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19.875 2H4.125C3.50625 2 3 2.44939 3 3.00481V22.4648C3 23.0202 3.36563 23.1616 3.82125 22.7728L11.5444 16.1986C11.7244 16.0471 12.0225 16.0471 12.2025 16.1936L20.1731 22.7879C20.6287 23.1666 21 23.0202 21 22.4648V3.00481C21 2.44939 20.4994 2 19.875 2ZM19.3125 20.0209L13.3444 15.0827C12.9281 14.7394 12.405 14.5677 11.8763 14.5677C11.3363 14.5677 10.8019 14.7444 10.3856 15.0979L4.6875 19.9502V3.51479H19.3125V20.0209Z" fill="var(--text-dark)" stroke="var(--text-dark)" stroke-width="0.7"/>
+                                        </svg>
+                                    </button>
+                                </form>
+
                             </div>
 
                             <div class="post__infos">
@@ -239,7 +176,7 @@
 
             <section class="side-menu">
                 <div class="side-menu__user-profile">
-                    <a href="https://github.com/leocosta1" target="_blank" class="side-menu__user-avatar">
+                    <a href="" target="_blank" class="side-menu__user-avatar">
                         <img src="{{ request.user.profile.image.url }}" alt="User Picture">
                     </a>
                     <div class="side-menu__user-info">
