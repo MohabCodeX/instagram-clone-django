@@ -2,67 +2,68 @@
 
 instagram-clone/
 │
-├── ig_prj/ # Main project directory
-│ ├── **init**.py
-│ ├── settings.py # Project settings and configurations
-│ ├── urls.py # Main URL routing
-│ ├── wsgi.py # WSGI configuration
-│ └── asgi.py # ASGI configuration
+├── ig_prj/                      # Main project directory
+│   ├── __init__.py
+│   ├── settings.py              # Project settings and configurations
+│   ├── urls.py                  # Main URL routing
+│   ├── wsgi.py                  # WSGI configuration
+│   └── asgi.py                  # ASGI configuration
 │
-├── authy/ # Authentication and User Profile app
-│ ├── migrations/
-│ ├── templates/
-│ ├── models.py # User Profile models
-│ ├── forms.py # User forms
-│ ├── urls.py
-│ └── views.py
+├── authy/                 # Authentication and User Profile app
+│   ├── migrations/
+│   ├── templates/
+│   ├── models.py                # User Profile models
+│   ├── forms.py                 # User forms
+│   ├── urls.py
+│   └── views.py
 │
-├── post/ # Post handling app
-│ ├── migrations/
-│ ├── templates/
-│ ├── models.py # Post and related models
-│ ├── forms.py # Post forms
-│ ├── urls.py
-│ └── views.py
+├── post/                        # Post handling app
+│   ├── migrations/
+│   ├── templates/
+│   ├── models.py                # Post and related models
+│   ├── forms.py                 # Post forms
+│   ├── urls.py
+│   └── views.py
 │
-├── comment/ # Comment handling app
-│ ├── migrations/
-│ ├── templates/
-│ ├── models.py # Comment models
-│ ├── forms.py
-│ ├── urls.py
-│ └── views.py
+├── comment/                     # Comment handling app
+│   ├── migrations/
+│   ├── templates/
+│   ├── models.py                # Comment models
+│   ├── forms.py
+│   ├── urls.py
+│   └── views.py
 │
-├── directs/ # Direct messaging app
-│ ├── migrations/
-│ ├── templates/
-│ ├── models.py # Message models
-│ ├── forms.py
-│ ├── urls.py
-│ └── views.py
+├── directs/                     # Direct messaging app
+│   ├── migrations/
+│   ├── templates/
+│   ├── models.py                # Message models
+│   ├── forms.py
+│   ├── urls.py
+│   └── views.py
 │
 
-├── notification/ # Notification system app
-│ ├── migrations/
-│ ├── templates/
-│ ├── models.py # Notification models
-│ ├── urls.py
-│ └── views.py
+├── notification/                # Notification system app
+│   ├── migrations/
+│   ├── templates/
+│   ├── models.py                # Notification models
+│   ├── urls.py
+│   └── views.py
 │
-├── static/ # Static files directory
-│ ├── css/
-│ ├── js/
-│ └── images/
+├── static/                      # Static files directory
+│   ├── css/
+│   ├── js/
+│   └── images/
 │
-├── media/ # User uploaded content
+├── media/                       # User uploaded content
 │
-├── templates/ # Global templates
-│ ├── base.html
-│ └── includes/
+├── templates/                   # Global templates
+│   ├── base.html
+│   └── includes/
 │
-├── manage.py # Django management script
+├── manage.py                    # Django management script
 │
-└─requirements.txt # Project dependencies
+└─requirements.txt             # Project dependencies
+
 
 ## Project Overview
 
